@@ -7,27 +7,21 @@
 сервисом.
 
 ```plantuml
-@startuml firstDiagram
-
+@startuml
 object User
-object Group
-object Member
+object TG_Bot
+object Middle_Backend
+object Backend
 
-object Event
-object Ticket
-
-User . Group
-User o.. Member
-Group o.. Member
-
-Group o. Event
-Event o.. Ticket
-Member . Ticket
-
+User --> TG_Bot
+TG_Bot -> Middle_Backend
+Middle_Backend -> Backend
+Backend -> Middle_Backend
+TG_Bot <- Middle_Backend
+User <-- TG_Bot
 @enduml
 ```
-
-![img.png](images/img.png)
+![img_2.png](images%2Fimg_2.png)
 
 ## Быстрый старт
 1. клонирование репозитория  
