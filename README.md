@@ -6,6 +6,27 @@
 Сам микросервис взаимодействует с банковскими
 сервисом.
 
+```plantuml
+@startuml firstDiagram
+
+object User
+object Group
+object Member
+
+object Event
+object Ticket
+
+User . Group
+User o.. Member
+Group o.. Member
+
+Group o. Event
+Event o.. Ticket
+Member . Ticket
+
+@enduml
+```
+
 ![img.png](images/img.png)
 
 ## Быстрый старт
