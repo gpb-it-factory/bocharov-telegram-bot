@@ -1,0 +1,13 @@
+@startuml
+actor       User       as Foo1
+control     TG_Bot     as Foo3
+entity      Middle_Backend      as Foo4
+database    Backend    as Foo5
+
+Foo1 --> Foo3
+Foo3 -> Foo4
+Foo4 -> Foo5
+Foo5 -> Foo4
+Foo3 <- Foo4
+Foo1 <-- Foo3
+@enduml
