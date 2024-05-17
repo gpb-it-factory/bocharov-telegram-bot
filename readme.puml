@@ -1,0 +1,13 @@
+@startuml
+actor       User
+control     TG_Bot
+entity      Middle_Backend
+database    Backend
+
+User --> TG_Bot
+TG_Bot -> Middle_Backend
+Middle_Backend -> Backend
+Backend -> Middle_Backend
+TG_Bot <- Middle_Backend
+User <-- TG_Bot
+@enduml
