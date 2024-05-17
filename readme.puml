@@ -1,13 +1,13 @@
 @startuml
-actor       User       as Foo1
-control     TG_Bot     as Foo3
-entity      Middle_Backend      as Foo4
-database    Backend    as Foo5
+actor       User
+control     TG_Bot
+entity      Middle_Backend
+database    Backend
 
-Foo1 --> Foo3
-Foo3 -> Foo4
-Foo4 -> Foo5
-Foo5 -> Foo4
-Foo3 <- Foo4
-Foo1 <-- Foo3
+User --> TG_Bot
+TG_Bot -> Middle_Backend
+Middle_Backend -> Backend
+Backend -> Middle_Backend
+TG_Bot <- Middle_Backend
+User <-- TG_Bot
 @enduml
