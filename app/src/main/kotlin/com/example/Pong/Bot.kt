@@ -28,11 +28,4 @@ class Bot(
             }
         }
     }
-    fun updaterMessage (update: Update) {
-        if (update.hasMessage()) {
-            val chatId = update.message.chatId.toString()
-            if (update.message.text=="hello")
-                SendMessage(chatId, "world")
-        }
-    }
 }
